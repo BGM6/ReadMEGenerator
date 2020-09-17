@@ -105,8 +105,8 @@ async function gitFunc() {
     \nGitHub: ${UserUrl}
     \nRepoUrl: ${RepoURL}
                 `;
-                
-   // This writes the user answers and API calls to a md file
+
+  // This writes the user answers and API calls to a md file
   const WriteResult = fs.writeFileSync(
     path.join(__dirname, "../readMeGenerator", "readMe.md"),
     Result
