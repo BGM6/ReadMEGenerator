@@ -1,3 +1,3 @@
 # ReadMEGenerator
 
-![alt text](assets/readMeGenerator.png "Website Screenshot")
+![alt text](readmegenerator/asset/readMeGenerator.png "Terminal Screenshot")
