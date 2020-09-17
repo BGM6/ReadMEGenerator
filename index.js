@@ -53,7 +53,7 @@ async function gitFunc() {
       name: "tests",
     },
   ]);
-  // This const store the user answer
+  // Variables that stores user answers
   const Username = userAnswer.username;
   const AppTitle = userAnswer.appTitle;
   const AppDescription = userAnswer.appDescription;
@@ -72,6 +72,7 @@ async function gitFunc() {
   const GitEmail = GitData.email;
   const UserUrl = GitData.html_url;
   const ProfileImg = GitData.avatar_url;
+  const RepoURL = GitData.repos_url;
   // console.log(GitEmail);
   // console.log(GitData);
   // Creating the read me file from user and git data
@@ -102,11 +103,14 @@ async function gitFunc() {
     \n**${Username}**
     \nEmail: ${GitEmail}
     \nGitHub: ${UserUrl}
+    \nRepoUrl: ${RepoURL}
                 `;
+                
+   // This writes the user answers and API calls to a md file
   const WriteResult = fs.writeFileSync(
     path.join(__dirname, "../readMeGenerator", "readMe.md"),
     Result
   );
-  console.log("ReadMe file has been created...");
+  console.log("readMe file has been created...");
 }
 gitFunc();
